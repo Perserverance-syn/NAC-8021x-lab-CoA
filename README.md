@@ -38,6 +38,10 @@ The environment is fully virtualized under VMware Workstation. Four VMs:
 - **VLAN 10 — Production** `192.168.10.0/24` (compliant device, `testuser`)
 - **VLAN 99 — Quarantine** `192.168.99.0/24` (non-compliant device, `baduser`)
 
+![NAC lab topology](diagrams/01-topology.svg)
+
+The authentication path at a glance:
+
 ```
   Windows 10                ovs-switch (Ubuntu)              FreeRADIUS (Ubuntu)
   ┌──────────┐    EAPOL    ┌──────────────────┐   RADIUS   ┌──────────────────┐
@@ -107,4 +111,4 @@ The authentication flow, step by step:
 
 ---
 
-
+*Built as a hands-on study of enterprise network access control using only open-source tooling. Documentation is in English; the original lab notes were authored in French and English.*
