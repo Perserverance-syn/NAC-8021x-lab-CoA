@@ -111,4 +111,4 @@ The authentication flow, step by step:
 
 ---
 
-*Built as a hands-on study of enterprise network access control using only open-source tooling. Documentation is in English; the original lab notes were authored in French and English.*
+
