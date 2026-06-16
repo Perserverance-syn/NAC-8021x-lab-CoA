@@ -1,0 +1,16 @@
+# /etc/freeradius/3.0/users
+# Add these at the TOP of the file, above the commented examples.
+# Each user is assigned a VLAN via the RFC-standard Tunnel-* attributes.
+
+testuser Cleartext-Password := "test123"
+        Tunnel-Type = VLAN,
+        Tunnel-Medium-Type = IEEE-802,
+        Tunnel-Private-Group-Id = "10"
+
+baduser Cleartext-Password := "bad123"
+        Tunnel-Type = VLAN,
+        Tunnel-Medium-Type = IEEE-802,
+        Tunnel-Private-Group-Id = "99"
+
+# testuser (compliant)     -> VLAN 10 (production)
+# baduser  (non-compliant) -> VLAN 99 (quarantine)

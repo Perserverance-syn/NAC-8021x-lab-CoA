@@ -1,0 +1,4 @@
+# /etc/hostapd/hostapd.vlan
+# Maps each VLAN id to a tagged sub-interface.
+10 ens38.10
+99 ens38.99
